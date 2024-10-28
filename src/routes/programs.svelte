@@ -47,6 +47,13 @@
                         <p class="darkText cardText pt-4">PowerPoint night!  All members can sign up to be presenters.  Grab your popcorn!</p>
                     </div>
                 </a>
+                <div class="eventCard w-96">
+                    <div class="D h-3/4 w-full"></div>
+                    <div class="yellow h-1/4">
+                        <p class="darkText cardTitleText pt-4">GAME DEV CAFE</p>
+                        <p class="darkText cardText pt-4">Our weekly event. Talk about games, drink hot drinks, and relax!</p>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -87,6 +94,16 @@
         aspect-ratio: 9/12;
     }
 
+    .eventCard:hover {
+        border-left: 1vw solid #ec25a0;
+        background-color: #ec25a0;
+    }
+
+    .eventCard:hover .yellow {
+        color: #ec25a0;
+        background-color: #ec25a0;
+    }
+
     .eventCard .A {
         background: url('/assets/GDYU_blender_workshop.png');
         background-position: 50% 90%;
@@ -104,6 +121,13 @@
         background-position: 70% 0%;
         background-repeat: no-repeat;
         background-size: 125% 147%;
+    }
+
+    .eventCard .D {
+        background: url('/assets/GDYU_game_dev_cafe.png');
+        background-position: 0% 10%;
+        background-repeat: no-repeat;
+        background-size: 100%;
     }
 
 </style>

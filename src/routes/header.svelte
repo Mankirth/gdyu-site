@@ -40,9 +40,11 @@
 {#key $page.url.pathname} <!-- Force re-render-->
 <div class="flex {navColor()} align-middle h-auto">
     <div class="flex lg:w-1/6 w-1/4 h-16 justify-evenly">
-        <div class="h-full px-2 flex">
-            <img src="assets/shib.png" alt="" class="my-auto lg:h-3/5 h-4/5 object-contain"/>
-        </div>
+        <a href="#">
+            <div class="h-full px-2 flex">
+                <img src="assets/shib.png" class="my-auto lg:h-3/5 h-4/5 object-contain" alt="" onmouseover="this.src='assets/pocket_shib_opaque.png';" onmouseout="this.src='assets/shib.png';"/>
+            </div>
+        </a>
         <div class="h-full px-2 w-16">
         </div>
     </div>
@@ -73,14 +75,19 @@
         </div>
         <div class="h-full px-2 flex">
             <a href="https://www.instagram.com/gdyuclub/" target="_blank" class="my-auto lg:h-3/5 h-4/5">
-                <img src="assets/insta.svg" alt="Instagram" class="h-full"/>
+                <img src="assets/insta.svg" alt="Instagram" class="h-full" id="insta"/>
             </a>
         </div>
     </div>
 </div>
 {/key}
 <style>
-
+    img:hover{
+        transform:rotate(10deg);
+    }
+    #insta:hover{
+        transform:rotate(-10deg);
+    }
     .textNav {
         font-family: 'Almarai';
         font-weight: 500;

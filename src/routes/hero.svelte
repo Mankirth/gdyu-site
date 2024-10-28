@@ -1,3 +1,8 @@
+<script>
+    import Carousel from 'svelte-carousel';
+    import { browser } from '$app/environment';
+    let carousel;
+</script>
 <div class="flex yellow w-full">
     <div class="flex flex-col w-1/12">
         <div class="blue dot mx-auto -mb-1 mt-10"/>
@@ -5,12 +10,16 @@
         <div class="blue diamond mx-auto -mt-1 mb-10"/>
     </div>
 
-    <div class="lg:absolute w-6/12 z-10">
-        <div class="w-10/12 py-10 lg:ml-32">
+    <div class="lg:absolute w-9/12 z-10">
+        <div class="w-4/12 py-10 lg:ml-32">
             <div class="pinkTextHero">GAME</div>
-            <div class="pinkTextSmallerHero">DEV</div>
-            <div class="pinkTextSmallerHero">DESIGN</div>
-            <div class="pinkTextSmallerHero">ART</div>
+            {#if browser}
+                <Carousel bind:this={carousel} autoplay autoplayDirection="prev" autoplayDuration={2000} dots={false} arrows={false}>
+                    <div class="pinkTextSmallerHero">DEV</div>
+                    <div class="pinkTextSmallerHero">DESIGN</div>
+                    <div class="pinkTextSmallerHero">ART</div>
+                </Carousel>
+            {/if}
         </div>
     </div>
 
@@ -38,15 +47,15 @@
         color: #ec25a0;
         font-family: 'Archivo Black';
         font-weight: 400;
-        font-size: calc(48px + 4vw);
-        line-height: calc(48px + 4vw);
+        font-size: calc(64px + 4vw);
+        line-height: calc(64px + 4vw);
     }
     .pinkTextSmallerHero {
         color: #ec25a0;
         font-family: 'Almarai';
         font-weight: 700;
-        font-size: calc(28px + 4vw);
-        line-height: calc(28px + 4vw);
+        font-size: calc(32px + 4vw);
+        line-height: calc(32px + 4vw);
     }
 
     .video {
